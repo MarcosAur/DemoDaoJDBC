@@ -7,7 +7,7 @@ import model.entities.Seller;
  *
  * @author marcos
  */
-public interface Sellerdao {
+public interface SellerDao {
     
     public void insert(Seller seller);
     public void update(Seller seller);

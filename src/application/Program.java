@@ -3,6 +3,7 @@ package application;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Locale;
+import model.dao.DaoFactory;
 import model.entities.Department;
 import model.entities.Seller;
 
@@ -18,6 +19,8 @@ public class Program {
         
         Department d = new Department(1,"Desenvolvimento");
         Seller seller = new Seller(1,"Marcos", "marcos@gmail.com", sdf.parse("02/04/2003"), 6000.00,d);
+        
+        SellerDao sellerDao = DaoFactory.crateSellerDao();
         
         System.out.println(seller);
     }
